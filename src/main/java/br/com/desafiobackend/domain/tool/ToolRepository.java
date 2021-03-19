@@ -1,8 +1,8 @@
 package br.com.desafiobackend.domain.tool;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ToolRepository extends CrudRepository<Tool, Long> {
+public interface ToolRepository extends JpaRepository<Tool, Long> {
 
 
 

@@ -27,6 +27,7 @@ public class ToolController {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Tool saveTool(@RequestBody Tool tool){
         return toolRepository.save(tool);
     }
