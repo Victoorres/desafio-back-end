@@ -26,9 +26,15 @@ public class ToolController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/save")
+    @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     public Tool saveTool(@RequestBody Tool tool){
         return toolRepository.save(tool);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteTool(@PathVariable("id") long id){
+        toolRepository.deleteById(id);
     }
 }
