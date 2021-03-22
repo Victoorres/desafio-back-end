@@ -39,4 +39,10 @@ public class ToolController {
         List<Tool> tools = toolRepository.findAll();
         return tag == null ? tools : toolRepository.findToolByTag(tag);
     }
+
+    @GetMapping("/filter")
+    @ResponseBody
+    public List<Tool> findToolByTitleLinkDescriptionTag(@RequestParam(required = false) @PathVariable("data") String data){
+        return toolRepository.findToolByTitleLinkDescriptionTag(data);
+    }
 }
