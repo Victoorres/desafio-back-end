@@ -1,0 +1,5 @@
+ALTER TABLE tool
+    ADD COLUMN description VARCHAR(225) NOT NULL;
+
+ALTER TABLE tool
+    ADD COLUMN tags TINYBLOB;

@@ -3,6 +3,7 @@ package br.com.desafiobackend.domain.tool;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import java.math.BigInteger;
 
 @Getter
 @Setter
